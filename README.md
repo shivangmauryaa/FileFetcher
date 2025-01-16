@@ -33,3 +33,9 @@
 ```bash
 git clone https://github.com/shivangmauryaa/FileFetcher.git
 cd FileFetcher
+
+## Install dependencies
+1.Install the required dependencies using pip
+
+```bash
+pip install -r requirements.txt
