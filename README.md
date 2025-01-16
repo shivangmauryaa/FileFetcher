@@ -42,4 +42,22 @@ cd FileFetcher
 pip install -r requirements.txt
 ```
 
+## Input Options
+
+You can use the script in two ways:
+
+1. **Single Domain**: 
+   - When prompted, enter a domain (e.g., `example.com`).
+   - The script will extract URLs related to the provided domain.
+
+2. **Multiple Domains from a File**: 
+   - Press Enter to load domains from a file.
+   - Provide the file name containing domains, one per line.
+   - Example input file:
+     ```
+     example1.com
+     example2.com
+     example3.com
+     ```
+
 
