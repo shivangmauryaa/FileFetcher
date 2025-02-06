@@ -3,6 +3,7 @@ import re
 import pyfiglet
 from colorama import Fore, Style, init
 from tqdm import tqdm  # Progress bar
+from urllib.parse import urlparse
 
 # Initialize colorama
 init(autoreset=True)
@@ -49,6 +50,11 @@ def validate_urls(urls):
             pass
     print(f"{Fore.GREEN}[SUCCESS]{Style.RESET_ALL} Found {Fore.RED}{len(valid_urls)}{Style.RESET_ALL} valid URLs with a 200 OK response.")
     return valid_urls
+def sanitize_domain(domain):
+    """Extract and sanitize the domain name for file naming."""
+    parsed_url = urlparse(domain)
+    clean_domain = parsed_url.netloc if parsed_url.netloc else parsed_url.path
+    return clean_domain.replace("/", "_")  # Replace any slashes to avoid issues
 
 def save_to_file(data, filename):
     """Save a list of URLs to a file."""
@@ -69,7 +75,9 @@ def process_domains(domains):
 
     # After processing all domains, validate URLs and save results
     valid_urls = validate_urls(all_urls)
-    save_to_file(valid_urls, "valid_urls.txt")
+    safe_domain = sanitize_domain(domain)                                                                                   
+    filename = f"{safe_domain}_valid_urls.txt"                                                                              
+    save_to_file(valid_urls, filename)
     print(f"{Fore.MAGENTA}[RESULT]{Style.RESET_ALL} Total valid URLs: {Fore.RED}{len(valid_urls)}{Style.RESET_ALL}.")
 
 # Main function
