@@ -9,7 +9,7 @@ init(autoreset=True)
 
 # Constants
 WAYBACK_URL = "https://web.archive.org/cdx/search/cdx"
-FILE_EXTENSIONS = r'\.(xls|xml|xlsx|json|pdf|sql|doc|docx|pptx|txt|zip|tar\.gz|tgz|bak|7z|rar|log|cache|secret|db|backup|yml|gz|config|csv|yaml|md|md5|exe|dll|bin|ini|bat|sh|tar|deb|rpm|iso|img|apk|msi|dmg|tmp|crt|pem|key|pub|asc)'
+FILE_EXTENSIONS = r'\.(xls|xml|xlsx|json|pdf|sql|doc|docx|pptx|txt|zip|tar\.gz|tgz|bak|7z|rar|log|cache|secret|db|backup|yml|gz|config|csv|yaml|md|md5|gif|jpeg|jpg|png|webp|exe|dll|bin|ini|bat|sh|tar|deb|rpm|iso|img|apk|msi|dmg|tmp|crt|pem|key|pub|asc)'
 
 # Functions
 def fetch_wayback_urls(domain):
