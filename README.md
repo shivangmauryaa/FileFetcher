@@ -1,6 +1,6 @@
 # FileFetcher
 
-**FileFetcher** is a Python tool that extracts and filters URLs from archived Wayback Machine data based on specific file types like `.pdf`, `.zip`, `.sql`, `.xls`, and more. It checks the availability of each URL, saving valid ones with a 200 OK response to a text file. Perfect for web scraping, research, or retrieving historical files from archived domains.
+**FileFetcher** is a Python tool that extracts and filters URLs from archived Wayback Machine data based on specific file types like `.pdf`, `.zip`, `.sql`, `.xls`, `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`, and more. It checks the availability of each URL, saving valid ones with a 200 OK response to a text file. Perfect for web scraping, research, or retrieving historical files from archived domains.
 
 ---
 
